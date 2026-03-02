@@ -26,5 +26,8 @@ struct TrainingView: View {
     }
 }
 #Preview {
-    TrainingView(categories: "Skill level", level: "Advanced")
+    TrainingView(
+        categories: "Skill level",
+        level: "Advanced"
+    )
 }

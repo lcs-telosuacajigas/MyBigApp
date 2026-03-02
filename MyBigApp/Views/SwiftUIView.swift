@@ -9,7 +9,28 @@ import SwiftUI
 
 struct SwiftUIView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            VStack{
+                Text("By George Orwell")
+                HStack{
+                    Rectangle()
+                        .containerRelativeFrame(.horizontal, count: 4, span: 1, spacing: 0)
+                        .containerRelativeFrame(.vertical, count: 4, span: 1, spacing: 0)
+                    VStack{
+                        Text("Genre")
+                        Text("Science fiction")
+                        Text("Date started")
+                        Text ("April 3, 2025")
+                        Text("Date finished")
+                        Text("April 9, 2025")
+                    }
+                }
+                Text("Star rating")
+                Text("Review")
+                Text("A timeless epic with more relevance today than ever")
+                    .navigationTitle("1984")
+            }
+        }
     }
 }
 

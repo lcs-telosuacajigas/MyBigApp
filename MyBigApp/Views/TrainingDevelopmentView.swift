@@ -14,13 +14,10 @@ struct TrainingDevelopmentView: View {
                 Color (red: 0.92, green: 0.95, blue: 0.85)
                     .ignoresSafeArea()
                 VStack{
-                    TextsView(
-                        text: "Personalized training setup",
-                        style: "Times New Roman",
-                        size: 28,
-                        typeOfLetters: ".bold"
-                    )
-                        .padding()
+                    Text ("Personalized training setup")
+                            .font(.custom("Times New Roman", size: 28))
+                            .fontWeight(.bold)
+                            .padding()
                     Text ("Configure your profille to get custom training plan tailored to your position and goals")
                         .font(.custom("Times New Roman", size: 20))
                     VStack{
@@ -86,21 +83,3 @@ struct TrainingDevelopmentView: View {
     TrainingDevelopmentView()
 }
 
-
-struct TextsView: View {
-    //MARK: Stored properties
-    let text: String
-    let style: String
-    let size: Int
-    let typeOfLetters: String
-    
-    
-    
-    
-    var body: some View {
-        Text (text)
-            .font(.custom(style, size))
-            .fontWeight(typeOfLetters)
-    }
-}
-    
