@@ -17,8 +17,8 @@ struct BookView: View {
                 }
                 HStack{
                     Rectangle()
-                        .containerRelativeFrame(.horizontal, count: 4, span: 1, spacing: 0)
-                        .containerRelativeFrame(.vertical, count: 4, span: 1, spacing: 0)
+                        .containerRelativeFrame(.horizontal, count: 5, span: 2, spacing: 0)
+                        .containerRelativeFrame(.vertical, count: 5, span: 2, spacing: 0)
                     VStack{
                         BookCategoriesView(
                             genre: "Science fiction",
@@ -39,6 +39,7 @@ struct BookView: View {
                     Image(systemName: "star.fill")
                     Image(systemName: "star.fill")
                     Image(systemName: "star.fill")
+                        .padding(.vertical)
                     Spacer()
                 }
                 HStack{
@@ -74,25 +75,4 @@ struct BookView: View {
 
 #Preview {
     BookView()
-}
-struct BookCategoriesView: View {
-    
-    //MARK: Stored properties
-    let genre: String
-    let dateStarted: String
-    let dateFinished: String
-    
-    
-    
-    var body: some View {
-        Text("Genre")
-            .fontWeight(.bold)
-        Text(genre)
-        Text("Date started")
-            .fontWeight(.bold)
-        Text (dateStarted)
-        Text("Date finished")
-            .fontWeight(.bold)
-        Text(dateFinished)
-    }
 }

@@ -12,6 +12,7 @@
 		8743FBE52F54BD8000D323E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8743FBDF2F54BD8000D323E0 /* Assets.xcassets */; };
 		8743FBE82F55B1A200D323E0 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743FBE72F55B1A200D323E0 /* TrainingView.swift */; };
 		8743FBEA2F55ED1400D323E0 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743FBE92F55ED1400D323E0 /* BookView.swift */; };
+		8743FC082F55F91D00D323E0 /* BookCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743FC072F55F91D00D323E0 /* BookCategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8743FBE12F54BD8000D323E0 /* MyBigAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBigAppApp.swift; sourceTree = "<group>"; };
 		8743FBE72F55B1A200D323E0 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		8743FBE92F55ED1400D323E0 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		8743FC072F55F91D00D323E0 /* BookCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				8743FBE02F54BD8000D323E0 /* TrainingDevelopmentView.swift */,
 				8743FBE72F55B1A200D323E0 /* TrainingView.swift */,
 				8743FBE92F55ED1400D323E0 /* BookView.swift */,
+				8743FC072F55F91D00D323E0 /* BookCategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				8743FBE32F54BD8000D323E0 /* TrainingDevelopmentView.swift in Sources */,
 				8743FBEA2F55ED1400D323E0 /* BookView.swift in Sources */,
 				8743FBE42F54BD8000D323E0 /* MyBigAppApp.swift in Sources */,
+				8743FC082F55F91D00D323E0 /* BookCategoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
