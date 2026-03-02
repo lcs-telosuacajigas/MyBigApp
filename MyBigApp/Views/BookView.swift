@@ -12,7 +12,10 @@ struct BookView: View {
         NavigationStack{
             VStack{
                 HStack{
-                    Text("By George Orwell")
+                    Text("by George Orwell")
+                        .font(.title)
+                        .foregroundColor(.purple)
+                        .padding(.vertical)
                     Spacer()
                 }
                 HStack{
@@ -41,7 +44,7 @@ struct BookView: View {
                     Image(systemName: "star.fill")
                         .padding(.vertical)
                     Spacer()
-                }
+                }.foregroundColor(.yellow)
                 HStack{
                     Text("Review")
                         .fontWeight(.bold)
@@ -63,7 +66,7 @@ struct BookView: View {
                                 Image(
                                     systemName: "chevron.left")
 
-                        }
+                        }.foregroundColor(.blue)
                     }
                 }
             }
