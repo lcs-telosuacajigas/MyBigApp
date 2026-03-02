@@ -20,15 +20,11 @@ struct BookView: View {
                         .containerRelativeFrame(.horizontal, count: 4, span: 1, spacing: 0)
                         .containerRelativeFrame(.vertical, count: 4, span: 1, spacing: 0)
                     VStack{
-                        Text("Genre")
-                            .fontWeight(.bold)
-                        Text("Science fiction")
-                        Text("Date started")
-                            .fontWeight(.bold)
-                        Text ("April 3, 2025")
-                        Text("Date finished")
-                            .fontWeight(.bold)
-                        Text("April 9, 2025")
+                        BookCategoriesView(
+                            genre: "Science fiction",
+                            dateStarted: "April 3, 2025",
+                            dateFinished: "April 9, 2025"
+                        )
                     }
                     Spacer()
                 }
@@ -78,4 +74,25 @@ struct BookView: View {
 
 #Preview {
     BookView()
+}
+struct BookCategoriesView: View {
+    
+    //MARK: Stored properties
+    let genre: String
+    let dateStarted: String
+    let dateFinished: String
+    
+    
+    
+    var body: some View {
+        Text("Genre")
+            .fontWeight(.bold)
+        Text(genre)
+        Text("Date started")
+            .fontWeight(.bold)
+        Text (dateStarted)
+        Text("Date finished")
+            .fontWeight(.bold)
+        Text(dateFinished)
+    }
 }
