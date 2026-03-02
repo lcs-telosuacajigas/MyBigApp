@@ -14,9 +14,12 @@ struct TrainingDevelopmentView: View {
                 Color (red: 0.92, green: 0.95, blue: 0.85)
                     .ignoresSafeArea()
                 VStack{
-                    Text ("Personalized training setup")
-                        .font(.custom("Times New Roman", size: 28))
-                        .fontWeight(.bold)
+                    TextsView(
+                        text: "Personalized training setup",
+                        style: "Times New Roman",
+                        size: 28,
+                        typeOfLetters: ".bold"
+                    )
                         .padding()
                     Text ("Configure your profille to get custom training plan tailored to your position and goals")
                         .font(.custom("Times New Roman", size: 20))
@@ -31,54 +34,22 @@ struct TrainingDevelopmentView: View {
                     }
                     Spacer()
                     VStack{
-                        Text("Skill level")
-                            .padding()
-                        HStack{
-                            Text ("Intermediate")
-                            Spacer()
-                            Button{
-                            }label: {
-                                Image(
-                                    systemName: "chevron.down")
-                                
-                            }
-                        }
-                        Text("Position")
-                            .padding()
-                        HStack{
-                            Text ("RW/LW")
-                            Spacer()
-                            Button{
-                            }label: {
-                                Image(
-                                    systemName: "chevron.down")
-                                
-                            }
-                        }
-                        Text("Focus area")
-                            .padding()
-                        HStack{
-                            Text ("Technical")
-                            Spacer()
-                            Button{
-                            }label: {
-                                Image(
-                                    systemName: "chevron.down")
-                                
-                            }
-                        }
-                        Text("Available minutes")
-                            .padding()
-                        HStack{
-                            Text ("60 mins")
-                            Spacer()
-                            Button{
-                            }label: {
-                                Image(
-                                    systemName: "chevron.down")
-                                
-                            }
-                        }
+                        TrainingView(
+                            categories: "Skill level",
+                            level: "Intermediate"
+                        )
+                        TrainingView(
+                            categories: "Position",
+                            level: "LW/RW"
+                        )
+                        TrainingView(
+                            categories: "Focus Area",
+                            level: "Technical"
+                        )
+                        TrainingView(
+                            categories: "Available minutes",
+                            level: "60 mins"
+                        )
                     }
                     
                     .padding(.horizontal)
@@ -103,15 +74,33 @@ struct TrainingDevelopmentView: View {
                         Button(
                             "Get better"
                         ) {
-                            // Does nothing right now
-                        
+                            
                     }
-                }
-            }
-          }
+                 }
+              }
+           }
         }
     }
 }
 #Preview {
     TrainingDevelopmentView()
 }
+
+
+struct TextsView: View {
+    //MARK: Stored properties
+    let text: String
+    let style: String
+    let size: Int
+    let typeOfLetters: String
+    
+    
+    
+    
+    var body: some View {
+        Text (text)
+            .font(.custom(style, size))
+            .fontWeight(typeOfLetters)
+    }
+}
+    
